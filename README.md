@@ -1,1 +1,2 @@
-# Frozen-Lake-IvLabs-Summer-Intern
+# Summer-Project
+Reinforcement Learning created by Summer Intern 2023
