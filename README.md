@@ -51,13 +51,23 @@ This can also be done by two ways
 
 #### Created in [MiniGrid-Empty-Environment](https://github.com/Farama-Foundation/MiniGrid) environment.
 
+## Requirements
+To run this environment, you need to have the following libraries installed:
+- numpy
+- matplotlib
+- gymnasium
+- minigrid
+
 ## Description
 **Description**: To train agent to reach terminal state by using different algorithms in 6x6 and 8x8 minigrid environment.
 
-**Installation:**
-
-pip install minigrid
-
+## Installation
+Use this code for intalling some library
+- pip install minigrid
+- pip install numpy
+- pip install matplotlib
+- pip install gymnasium
+  
 **Action Space**
 The action space Used here -
 
