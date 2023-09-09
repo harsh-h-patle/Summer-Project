@@ -61,21 +61,51 @@ To run this environment, you need to have the following libraries installed:
 ## Description
 **Description**: To train agent to reach terminal state by using different algorithms in 6x6 and 8x8 minigrid environment.
 
+![](https://i.imgur.com/3m9a615.gif) ![](https://i.imgur.com/ahGLjM7.gif)
+
+MiniGrid Empty Environment is solved by different algorithms Monte Carlo, SARSA, SARSA Lambda, Q-Learning in Reinforcement Learning.
+
 ## Installation
 Use this code for intalling some library
 - pip install minigrid
 - pip install numpy
 - pip install matplotlib
 - pip install gymnasium
-  
-**Action Space**
-The action space Used here -
 
-	Turn LEFT - 0
-	Turn Right - 1
-	Move Forward - 2
-**State Space**
-* There are 16 states in MiniGrid-Empty-6x6-v0 environment and each cell is represented by (x,y) where x = 1,2,3,4 and y = 1,2,3,4 and also the agent position can be accessed through the built-in function called "agent_pos".
-* Similarily, there are 36 states in MiniGrid-Empty-8x8-v0 environmnet where each cell is represnted by (x,y) where x = 1 to 6 & y = 1 to 6.
-* State space also requires the direction of the agent facing towards that can be accessed through user built-in functions from the minigrid files which is "agent_dir".
-* Agent aim is to reach the final goal state in an optimized way by using the algorithms like Monte-carlo, SARSA, SARSA Lambda, Q-Learning.
+## Environment Description
+
+### State Space
+- There are 16 states in MiniGrid-Empty-6x6-v0 environment and each state is represented by (x,y) where x = 1 to 4 and y = 1 to 4 
+- And there are 36 states in MiniGrid-Empty-8x8-v0 environment and each cell is represented by (x,y) where x = 1 to 6 and y = 1 to 6
+- State space also contain the direction of the agent at that state, the direction are as follows,
+  	- 0 = Right 
+  	- 1 = Down
+  	- 2 = Left
+  	- 3 = Up
+- Obseravtion contain iamge array which can be used to identify where the agent is in environment.
+
+### Action Space
+There are three action agent can take to change state or direction,
+- 0 = Turn Left
+- 1 = Turn Right
+- 2 = Move Forward
+
+### Rewards
+Every state has 0 reward except at terminal state.
+
+## Algorithms
+Four algorithm are used to converge the policy and take optimal actions,
+- Monte-Carlo
+- SARSA
+- SARSA Lambda
+- Q-Learning
+
+## Results
+
+### MiniGrid-Empty-6x6-v0
+
+![](https://i.imgur.com/BDnIvQI.png) ![](https://i.imgur.com/4rQas2b.png)
+
+### MiniGrid-Empty-8x8-v0
+
+![](https://i.imgur.com/378ocDl.png) ![](https://i.imgur.com/aDHMdLL.png)
