@@ -144,7 +144,7 @@ To run this environment, you need to have the following libraries installed:
 - There are two actions in this Environment
   - 0 = Do Nothing
   - 1 = Flap
-- After taking Flap as action bird changes its direction by 45° (In this case taken direction to 0°)
+- After taking Flap as action bird changes its direction by 45° (In this case we have taken direction 0°)
 
 ### Reward
 
