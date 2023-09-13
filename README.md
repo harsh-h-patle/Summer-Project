@@ -2,14 +2,53 @@
 
 #### Created in [Frozen-Lake](https://github.com/RaviAgrawal-1824/Assignment-1-Frozen-Lake) environment.
 
+## Description
+**Description**: For better understanding of the **Policy** and **Value** Iteration using the Frozen lake environment for both Deterministic and Stochastic of fully observable environments.
+
+This Frozen Lake environment is solved by Dynamic Programming Method using Reinforcement learning.
+
 ## Requirements
 To run this environment, you need to have the following libraries installed:
 - numpy
 - matplotlib
 - gymnasium
 
-## Description
-**Description**: For better understanding of the **Policy** and **Value** Iteration using the Frozen lake environment for both Deterministic and Stochastic of fully observable environments.
+This library can be installed by using keyword "pip install (library)".
+
+## Environment Description
+
+  ### State Space
+  - There are 16 states in 4x4 Environment and 64 states in 8x8 Environment
+  - Each state has 0 as reward except terminal state
+  - Any state may contain lake and the aim of the agent is to reach the Goal in optimal way using policy and value iteration
+  - Dictionary contain every state with taking all 4 action and transition probability to take action with reaward getting.
+
+  ### Action Space
+  
+  There are 4 actions for every state that agent can take,
+  - Left - 0
+  - Down - 1
+  - Right - 2
+  - Up - 3
+
+  ### Reward
+  
+  - There are no rewards on any state except Terminal state
+  - Terminal state has 1 reward.
+
+## Algorithms
+Here Dynamic Programming method is used for convergence of policy.
+This can also be done by two ways
+### Policy Iteration
+  - Evaluating Value function for all states
+  - Acting greedy toward policy using action value function evaluated using value function
+  - Iterated many times upto convergence of policy.
+### Value Iteration
+  - Evaluating Value function for particular state
+  - Taking Greedy of all action it can take from that state using Action value function
+  - Then converging policy.
+
+## Results
 
 ### Non-Slippery Environment
 
@@ -19,37 +58,15 @@ To run this environment, you need to have the following libraries installed:
 
 ![](https://i.imgur.com/9dF44vt.gif)
 
-This Frozen Lake environment is solved by Dynamic Programming Method using Reinforcement learning.
-
-## Environment Description
-  ### State Space
-  - There are 16 states in 4x4 Environment and 64 states in 8x8 Environment
-  - Each state has 0 as reward except terminal state
-  - Any state may contain lake and the aim of the agent is to reach the Goal in optimal way using policy and value iteration
-  - Dictionary contain every state with taking all 4 action and transition probability to take action with reaward getting.
-  ### Action Space
-  There are 4 actions for every state that agent can take,
-  - Left - 0
-  - Down - 1
-  - Right - 2
-  - Up - 3
-
-## Algorithm
-Here Dynamic Programming method is used for convergence of policy.
-This can also be done by two ways
-### Policy Iteration
-  - Evaluating Value function for all states
-  - Acting greedy toward policy using action value function evaluated using value function
-  - Iterated many times upto convergence of policy
-### Value Iteration
-  - Evaluating Value function for particular state
-  - Taking Greedy of all action it can take from that state using Action value function
-  - Then converging policy
-
-
 # MiniGrid Empty Room Environment
 
 #### Created in [MiniGrid-Empty-Environment](https://github.com/Farama-Foundation/MiniGrid) environment.
+
+## Description
+
+**Description**: To train agent to reach terminal state by using different algorithms in 6x6 and 8x8 minigrid environment.
+
+MiniGrid Empty Environment is solved by different algorithms Monte Carlo, SARSA, SARSA Lambda, Q-Learning in Reinforcement Learning.
 
 ## Requirements
 To run this environment, you need to have the following libraries installed:
@@ -57,20 +74,6 @@ To run this environment, you need to have the following libraries installed:
 - matplotlib
 - gymnasium
 - minigrid
-
-## Description
-**Description**: To train agent to reach terminal state by using different algorithms in 6x6 and 8x8 minigrid environment.
-
-![](https://i.imgur.com/3m9a615.gif) ![](https://i.imgur.com/ahGLjM7.gif)
-
-MiniGrid Empty Environment is solved by different algorithms Monte Carlo, SARSA, SARSA Lambda, Q-Learning in Reinforcement Learning.
-
-## Installation
-Use this code for intalling some library
-- pip install minigrid
-- pip install numpy
-- pip install matplotlib
-- pip install gymnasium
 
 ## Environment Description
 
@@ -91,7 +94,8 @@ There are three action agent can take to change state or direction,
 - 2 = Move Forward
 
 ### Rewards
-Every state has 0 reward except at terminal state.
+- Every state has 0 reward except at terminal state
+- Terminal state has 1 reward.
 
 ## Algorithms
 Four algorithm are used to converge the policy and take optimal actions,
@@ -102,10 +106,61 @@ Four algorithm are used to converge the policy and take optimal actions,
 
 ## Results
 
-### MiniGrid-Empty-6x6-v0
+![](https://i.imgur.com/3m9a615.gif) ![](https://i.imgur.com/ahGLjM7.gif)
 
-![](https://i.imgur.com/BDnIvQI.png) ![](https://i.imgur.com/4rQas2b.png)
+## Graphs
 
-### MiniGrid-Empty-8x8-v0
+![](https://i.imgur.com/uirrrAY.png) ![](https://i.imgur.com/19KmYUc.png)
 
-![](https://i.imgur.com/378ocDl.png) ![](https://i.imgur.com/aDHMdLL.png)
+# Flappy Bird Environment
+
+#### Created in [Flappy-Bird](https://github.com/Talendar/flappy-bird-gym) Environment.
+
+## Description
+
+**Description** - Flappy Bird is the main Project, Here we are training our agent(bird) to cross the maximum pipes in given Episodes with chenging different parameters using algorithms and concept learned in previous environment as assignment.
+
+Flappy Bird Environment is solved by Q-Learning Algorithm.
+
+### Requirements
+To run this environment, you need to have the following libraries installed:
+- numpy
+- flappy_bird_gym (Imported from Github clone)
+- pygame
+- matplotlib.pyplot (For Graphs)
+- time
+
+## Environment Description
+
+### State Space
+
+- This environment contain state as location coordinate of bird centre in environment.
+- Observations has distance of bird from pipe as Horizontal distance and difference between the player's y position and the next hole's y position as Vertical distance
+- State always get reset after crossing pipes
+- Agent also has direction it is going after flap in observation space
+
+### Action Space
+
+- There are two actions in this Environment
+  - 0 = Do Nothing
+  - 1 = Flap
+- After taking Flap as action bird changes its direction by 45° (In this case taken direction to 0°)
+
+### Reward
+
+- There is +1 reward at every step agent take
+- At passing every pipe, reward is +5
+- When Crashed reward will be -10.
+
+## Algorithm
+
+Flappy Bird Environment is solved by Q-Learning Environment.
+
+## Results
+
+(To be uploaded)
+
+## Graphs
+
+![](https://i.imgur.com/vT6QK30.png)
+![](https://i.imgur.com/y24YItY.png)
